@@ -29,9 +29,25 @@ public class SavingsAccount extends BankAccount {
         return interest;
     }
 
-    public double getCompoundInterest(int times, int years){
-       double interest = getBalance()*Math.pow(1+(rate/times), times*years);
-       return interest;
+    public double getCompoundInterest(int times, int years) {
+        double interest = getBalance() * Math.pow(1 + (rate / times), times * years);
+        return interest;
+    }
+
+    public double getRate() {
+        return this.rate;
+    }
+
+    public double getMaxWithdrawalLimit() {
+        return this.maxWithdrawalLimit;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public void setMaxWithdrawalLimit(double maxWithdrawalLimit) {
+        this.maxWithdrawalLimit = maxWithdrawalLimit;
     }
 
 }
