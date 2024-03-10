@@ -30,7 +30,7 @@ public class SavingsAccount extends BankAccount {
     }
 
     public double getCompoundInterest(int times, int years) {
-        double interest = getBalance() * Math.pow(1 + (rate / times), times * years);
+        double interest = getBalance() * Math.pow(1 + (rate / 100), times * years);
         return interest;
     }
 
